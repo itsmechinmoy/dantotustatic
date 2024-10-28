@@ -408,7 +408,7 @@
             event.preventDefault();
             const repo = await findWorkingUrl(repos.map(r => `${r}index.min.json`));
             if (repo) {
-              const repoUrl = `tachiyomi://add-repo?url=${repo} , ani.dantotsu://add-repo?url=${repo}`;
+              const repoUrl = `tachiyomi://add-repo?url=${repo}`;
               document.getElementById('add-repo-btn').setAttribute('href', repoUrl);
               console.log('Repo URL set to:', repoUrl);
               window.location.href = repoUrl; // Add this line to navigate to the URL
