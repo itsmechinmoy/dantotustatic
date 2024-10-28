@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Anilist Client, OpenSource, Tachiyomi, Aniyomi, Anime app, Anilist Sync">
     <meta property="og:title" content="Download Aniyomi Extensions!">
-    <meta property="og:description" content="Download All Manga Extensions Available! Remember, These Repositories Are Not Endorsed By Official Sources. Utilizing A Counterfeit Repository Could Potentially Expose Your Device To Malware Threats. Exercise Prudence And Patience; Wait Until A Repository Garners Over 100 Stars On GitHub Before Considering Its Reliability">
+    <meta property="og:description" content="Download All Anime Extensions Available! Remember, These Repositories Are Not Endorsed By Official Sources. Utilizing A Counterfeit Repository Could Potentially Expose Your Device To Malware Threats. Exercise Prudence And Patience; Wait Until A Repository Garners Over 100 Stars On GitHub Before Considering Its Reliability">
     <meta property="og:url" content="/manga-extensions">
     <meta property="og:image" content="https://s4.anilist.co/file/anilistcdn/user/avatar/large/b6110204-X922sXE3M8RC.png">
     <link rel="apple-touch-icon" sizes="180x180" href="https://s4.anilist.co/file/anilistcdn/user/avatar/large/b6110204-X922sXE3M8RC.png">
@@ -305,7 +305,7 @@
           </div>
         </div>
         <script>
-          const repos = ["https://raw.githubusercontent.com/almightyhak/aniyomi-anime-repo/main/", "https://raw.githubusercontent.com/ni3x/aniyomi-extensions/repo/", "https://raw.githubusercontent.com/usyboi/aniyomi-extensions/repo/", "https://raw.githubusercontent.com/punpunsx/aniyomi-extensions/repo/", "https://raw.githubusercontent.com/Sadwhy/aniyomi-extensions/repo/"];
+          const repos = ["https://raw.githubusercontent.com/kohi-den/aniyomi-anime-repo/main/", "https://raw.githubusercontent.com/ni3x/aniyomi-extensions/repo/", "https://raw.githubusercontent.com/usyboi/aniyomi-extensions/repo/", "https://raw.githubusercontent.com/punpunsx/aniyomi-extensions/repo/", "https://raw.githubusercontent.com/Sadwhy/aniyomi-extensions/repo/"];
           async function checkUrl(url) {
             try {
               const response = await fetch(url, {
@@ -425,7 +425,7 @@
             event.preventDefault();
             const repo = await findWorkingUrl(repos.map(r => `${r}index.min.json`));
             if (repo) {
-              const repoUrl = `aniyomi://add-repo?url=${repo} , ani.dantotsu://add-repo?url=${repo}`;
+              const repoUrl = `aniyomi://add-repo?url=${repo}`;
               document.getElementById('add-repo-btn').setAttribute('href', repoUrl);
               console.log('Repo URL set to:', repoUrl);
               window.location.href = repoUrl; // Add this line to navigate to the URL
